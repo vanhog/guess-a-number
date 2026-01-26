@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./tw.css" />
+  </head>
+  <body class="bg-[url('./assets/pokertable.jpg')] bg-contain">
+    <main class="flex flex-col h-screen justify-items-start items-center pt-30">
+      <h1
+        class="font-bangers text-white font-bold text-center text-4xl md:text-6xl m-6 tracking-wider"
+      >
+        Guess a number between 1 and 100!
+      </h1>
+      <section
+        class="flex flex-col justify-center items-center bg-rose-700 w-90 rounded-xl border-2 border-amber-400"
+      >
+        <p>How often do you think you can guess a number?</p>
+      </section>
+      <section
+        class="flex flex-col justify-center items-center bg-rose-700 w-90 rounded-xl border-2 border-amber-400"
+      >
+        <form action="submit">
+          <div>
+            <input type="text" class="w-20 bg-amber-200" />
+          </div>
+          <button>Guess!</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
