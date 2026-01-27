@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 node_modules/
 pokertable/
+
 package.json
 package-lock.json 

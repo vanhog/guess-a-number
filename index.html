@@ -13,14 +13,38 @@
       >
         Guess a number between 1 and 100!
       </h1>
-      <section
-        class="flex flex-col justify-center items-center bg-rose-700 w-90 rounded-xl border-2 border-amber-400"
-      >
-        <p>How often do you think you can guess a number?</p>
+      <section class="input_section">
+        <p class="text-center text-xl text-white font-bold p-5">
+          How often do you think you can guess a number?
+        </p>
+        <div class="grid grid-cols-2 text-left">
+          <div>
+            <div class="guess_radio_formatter">
+              <input type="radio" id="four" name="guesses" value="4" />
+              <label for="four" class="guess_label">4</label><br />
+            </div>
+            <div class="guess_radio_formatter">
+              <input type="radio" id="six" name="guesses" value="6" />
+              <label for="six" class="guess_label">6</label>
+            </div>
+          </div>
+          <div>
+            <div class="guess_radio_formatter">
+              <input type="radio" id="five" name="guesses" value="5" />
+              <label for="five" class="guess_label">5</label><br />
+            </div>
+            <div class="guess_radio_formatter">
+              <input type="radio" id="custom" name="guesses" value="Custom" />
+              <label
+                for="custom"
+                class="guess_label text-yellow-500 text-12xl xl"
+                >Custom</label
+              >
+            </div>
+          </div>
+        </div>
       </section>
-      <section
-        class="flex flex-col justify-center items-center bg-rose-700 w-90 rounded-xl border-2 border-amber-400"
-      >
+      <section class="input_section">
         <form action="submit">
           <div>
             <input type="text" class="w-20 bg-amber-200" />
