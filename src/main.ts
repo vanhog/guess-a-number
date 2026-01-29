@@ -32,7 +32,7 @@ function getNumGuesses(): number {
 }
 
 function checkValidityGuess(): boolean {
-  guess = Number(inputField.value);
+  let guess: number = Number(inputField.value);
   if (isNaN(guess) || guess > 100 || guess < 1) {
     return false;
   } else {
@@ -81,26 +81,4 @@ guessButton?.addEventListener('click', function () {
     inputField.value = '';
     window.alert('Please, enter a number between 1 and 100.');
   }
-
-  // if (checkValidityGuess()) {
-  //   if (Number(inputField.value) === vicNum) {
-  //     window.alert('You won!');
-  //     runsDone = 1;
-  //     vicNum = NaN;
-  //     // enable radio buttons again
-  //     radios.forEach((radio) => (radio.disabled = false));
-  //   } else {
-  //     if (runsDone < gameRuns) {
-  //       window.alert("Nope! You're wrong!");
-  //       runsDone += 1;
-  //       inputField.value = '';
-  //     } else {
-  //       window.alert('You lost! Game over!');
-  //       // enable radio buttons again
-  //       radios.forEach((radio) => (radio.disabled = false));
-  //       runsDone = 1;
-  //       vicNum = NaN;
-  //     }
-  //   }
-  // }
 });
