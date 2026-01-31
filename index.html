@@ -14,35 +14,42 @@
         Guess a number between 1 and 100!
       </h1>
       <section class="input_section">
-        <p class="text-center text-xl text-white font-bold p-5 tracking-widest">
-          How often do you to guess the correct number?
-        </p>
-        <div class="grid grid-cols-2 text-left" tabindex="0" id="radios">
-          <div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="four" name="guesses" value="4" checked />
-              <label for="four" class="guess_label">4</label><br />
+        <fieldset class="flex flex-col justify-center items-center">
+          <legend
+            class="text-center text-xl text-white font-bold p-5 tracking-widest"
+          >
+            How often do you to guess the correct number?
+          </legend>
+          <div class="grid grid-cols-2 text-left" tabindex="0" id="radios">
+            <div class="guess-radio-group">
+              <label>
+                <input
+                  type="radio"
+                  id="four"
+                  name="guesses"
+                  value="4"
+                  checked
+                /><span class="guess-label">4</span>
+              </label>
+              <label>
+                <input type="radio" id="six" name="guesses" value="6" />
+                <span class="guess-label">6</span>
+              </label>
             </div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="six" name="guesses" value="6" />
-              <label for="six" class="guess_label">6</label>
+            <div class="guess-radio-group">
+              <label>
+                <input type="radio" id="five" name="guesses" value="5" />
+                <span class="guess-label">5</span><br />
+              </label>
+              <label>
+                <input type="radio" id="custom" name="guesses" value="Custom" />
+                <span class="guess-label text-yellow-500 text-12xl xl"
+                  >Custom</span
+                >
+              </label>
             </div>
           </div>
-          <div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="five" name="guesses" value="5" />
-              <label for="five" class="guess_label">5</label><br />
-            </div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="custom" name="guesses" value="Custom" />
-              <label
-                for="custom"
-                class="guess_label text-yellow-500 text-12xl xl"
-                >Custom</label
-              >
-            </div>
-          </div>
-        </div>
+        </fieldset>
       </section>
       <section class="input_section">
         <div class="flex flex-col justify-center">
@@ -50,14 +57,21 @@
             <label
               for="number_input"
               class="text-yellow-500 font-black text-2xl md:text-4xl lg:text-6xl text-right pb-4"
-              >Your number!</label
+              >Enter your number</label
             >
+            <p id="number_hint" class="sr-only">
+              Enter a whole number between 1 and 100.
+            </p>
             <input
               name="number"
               id="number_input"
               type="text"
-              class="min-w-48 p-2 text-red-600 font-black text-4xl text-center bg-amber-200 border-2 border-green-600 rounded-lg tracking-widest"
+              inputmode="numeric"
+              autocomplete="off"
+              aria-describedby="number_hint"
+              class="min-w-48 p-2 text-red-600 font-black text-4xl text-center bg-amber-200 border-2 border-green-600 rounded-lg tracking-widest focus-visible:outline-2 focus-visible:outline-offset-2"
             />
+            <!-- Turn autocomplete off, because this is a game -->
           </div>
           <button
             id="guessButton"
