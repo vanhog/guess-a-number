@@ -24,4 +24,11 @@
   .guess_radio_formatter {
     @apply flex flex-row justify-start  items-center mt-4 mb-8;
   }
+  .attribution {
+    @apply text-xs my-6 text-center text-white font-sans;
+  }
+
+  .attribution a {
+    @apply text-blue-400;
+  }
 }
