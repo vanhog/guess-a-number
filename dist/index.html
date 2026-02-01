@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess a Number - Training Project</title>
-    <script type="module" crossorigin src="/assets/index-Bex0KhIe.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-BjPkPKxZ.css">
+    <script type="module" crossorigin src="/assets/index-iKeP8H3y.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-0B-w6Zr_.css">
   </head>
   <body class="bg-[url('../assets/pokertable.jpg')] bg-contain">
     <main class="flex flex-col h-screen justify-items-start items-center pt-30">
@@ -15,35 +15,42 @@
         Guess a number between 1 and 100!
       </h1>
       <section class="input_section">
-        <p class="text-center text-xl text-white font-bold p-5 tracking-widest">
-          How often do you to guess the correct number?
-        </p>
-        <div class="grid grid-cols-2 text-left" tabindex="0" id="radios">
-          <div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="four" name="guesses" value="4" checked />
-              <label for="four" class="guess_label">4</label><br />
+        <fieldset class="flex flex-col justify-center items-center">
+          <legend
+            class="text-center text-xl text-white font-bold p-5 tracking-widest"
+          >
+            How often do you to guess the correct number?
+          </legend>
+          <div class="grid grid-cols-2 text-left" tabindex="0" id="radios">
+            <div class="guess-radio-group">
+              <label>
+                <input
+                  type="radio"
+                  id="four"
+                  name="guesses"
+                  value="4"
+                  checked
+                /><span class="guess-label">4</span>
+              </label>
+              <label>
+                <input type="radio" id="six" name="guesses" value="6" />
+                <span class="guess-label">6</span>
+              </label>
             </div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="six" name="guesses" value="6" />
-              <label for="six" class="guess_label">6</label>
+            <div class="guess-radio-group">
+              <label>
+                <input type="radio" id="five" name="guesses" value="5" />
+                <span class="guess-label">5</span><br />
+              </label>
+              <label>
+                <input type="radio" id="custom" name="guesses" value="Custom" />
+                <span class="guess-label text-yellow-500 text-12xl xl"
+                  >Custom</span
+                >
+              </label>
             </div>
           </div>
-          <div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="five" name="guesses" value="5" />
-              <label for="five" class="guess_label">5</label><br />
-            </div>
-            <div class="guess_radio_formatter">
-              <input type="radio" id="custom" name="guesses" value="Custom" />
-              <label
-                for="custom"
-                class="guess_label text-yellow-500 text-12xl xl"
-                >Custom</label
-              >
-            </div>
-          </div>
-        </div>
+        </fieldset>
       </section>
       <section class="input_section">
         <div class="flex flex-col justify-center">
@@ -51,23 +58,54 @@
             <label
               for="number_input"
               class="text-yellow-500 font-black text-2xl md:text-4xl lg:text-6xl text-right pb-4"
-              >Your number!</label
+              >Enter your number</label
             >
+            <p id="number_hint" class="sr-only">
+              Enter a whole number between 1 and 100.
+            </p>
             <input
               name="number"
               id="number_input"
               type="text"
-              class="min-w-48 p-2 text-red-600 font-black text-4xl text-center bg-amber-200 border-2 border-green-600 rounded-lg tracking-widest"
+              inputmode="numeric"
+              autocomplete="off"
+              aria-describedby="number_hint"
+              class="p-2 w-[80%] text-red-600 font-black text-4xl text-center bg-amber-200 border-2 border-green-600 rounded-lg tracking-widest focus-visible:outline-2 focus-visible:outline-offset-2"
             />
+            <!-- Turn autocomplete off, because this is a game -->
           </div>
           <button
             id="guessButton"
-            class="bg-pink-400 mx-12 my-2 p-2 text-4xl text-yellow-200 rounded-xl hover:bg-pink-600 hover:text-yellow-400 active:scale-89"
+            class="bg-pink-400 w-[80%] mx-12 my-2 p-2 text-4xl text-yellow-200 rounded-xl hover:bg-pink-600 hover:text-yellow-400 active:scale-89"
           >
             Guess!
           </button>
         </div>
       </section>
     </main>
+    <footer>
+      <div class="attribution mt-6">
+        Challenge by
+        <a
+          href="https://edu.opencampus.sh/en"
+          target="_blank"
+          rel="noopener noreferrer"
+          >OpenCampus</a
+        >. Coded by
+        <a
+          href="https://github.com/vanhog"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Dieter H. Hoogestraat (dee van hog)</a
+        >. <br />
+        <p>
+          Source code:
+          <a href="https://github.com/vanhog/ocwebdev_ac_guessAnumber"
+            >https://github.com/vanhog/ocwebdev_ac_guessAnumber</a
+          >
+        </p>
+        <p>For training use only. Do not use in production. No warranty.</p>
+      </div>
+    </footer>
   </body>
 </html>
