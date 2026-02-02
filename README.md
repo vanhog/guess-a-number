@@ -10,6 +10,7 @@ This is a solution to the [OpenCampus WebDev Program 2025's ](https://edu.openca
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Built with](#built-with)
+- [Acknowledgements](#acknowledgements)
 - [Author](#author)
 
 ## Task
